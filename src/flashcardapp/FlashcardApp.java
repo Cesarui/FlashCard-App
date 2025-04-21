@@ -1,20 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package flashcardapp;
 
-/**
- *
- * @author cpime
- */
+import java.util.ArrayList;
+
 public class FlashcardApp {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        ArrayList<Flashcard> cards = new ArrayList<>();
+        
+        cards.add(new Flashcard("Can i bark", "no"));
+        cards.add(new Flashcard("Is the sky blue" , "no"));
+        
+        for(int i = 0; i < cards.size(); i++){
+            System.out.println(i + 1  + ". " + cards.get(i));
+        }
     }
-    
+   
 }
