@@ -1,6 +1,7 @@
 package flashcardapp;
 
 public class Flashcard {
+    // Flashcard Class, for more organization!
     
     String question;
     String answer;
