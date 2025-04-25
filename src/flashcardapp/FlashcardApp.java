@@ -47,7 +47,9 @@ public class FlashcardApp {
     }
    
     // Another comment for consistency since it's been a rough week:/ 
-    // It'll be a better day tomorrow. I swear
+    // It'll be a better day tomorrow. I swear. It was indeed a better day
+    // But programmed in C# and did some world Design. Tomrrow i'll work on
+    // this.
     
     
 }
