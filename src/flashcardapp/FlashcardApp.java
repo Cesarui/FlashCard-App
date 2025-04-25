@@ -33,10 +33,22 @@ public class FlashcardApp {
                     String answer = scanner.nextLine();
                     
                     cards.add(new Flashcard(question, answer));
-                    System.out.println("Here is your card: " + cards.get(0));
+                }
+                case 2 -> {
+                    System.out.println("Here are your flashcards!");
+                    for (int i = 0; i < cards.size(); i++) {
+                        System.out.println(i + 1 +". " + cards.get(i));
+                    }
+                }
+                case 3 -> {
+                    
                 }
             }
-        }
+             System.out.println("""
+                               What would you like to do now?
+                               1. Add a Flashcard!
+                               2. View Flashcards
+                               """);
         
         for(int i = 0; i < cards.size(); i++){
             // Assigns i + 1 into a String value, basically when i is 1, 
@@ -44,12 +56,7 @@ public class FlashcardApp {
             questionNumber.put(String.valueOf(i + 1), cards.get(i));
             System.out.println(i + 1  + ". " + cards.get(i));
         }
+        
+        }      
     }
-   
-    // Another comment for consistency since it's been a rough week:/ 
-    // It'll be a better day tomorrow. I swear. It was indeed a better day
-    // But programmed in C# and did some world Design. Tomrrow i'll work on
-    // this.
-    
-    
 }
