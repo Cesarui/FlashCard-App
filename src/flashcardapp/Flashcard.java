@@ -16,7 +16,7 @@ public class Flashcard {
        and only letting code interact with it through controlled methods
     
        Right now question and answer are private so nothing can mess with it
-       But you can safely modify its code with getters and setters!
+       But you can safely modify its value with getters and setters!
     */
     
     public String getAnswer(){
