@@ -16,8 +16,9 @@ public class FlashcardApp {
         boolean stay = true;
         
         System.out.println("""
-                               Welcome to your Study Buddy!
-                               Press 1 to add your first question & answer!   
+                               WELCOME TO YOUR STUDY BUDDY!
+                               ____________________________________________
+                               Press 1 to add your first question & answer! 
                                """);
         
         while(stay){
@@ -47,7 +48,6 @@ public class FlashcardApp {
                     */
                     int index = cards.size();
                     questionNumber.put(String.valueOf(index), cards.get(cards.size() - 1));
-                    System.out.println(questionNumber);
                 }
                 case 2 -> {
                     System.out.println("Here are your flashcards!");
@@ -56,11 +56,37 @@ public class FlashcardApp {
                     }
                 }
                 case 3 -> {
+                    System.out.println("""
+                                       How do you want to study?
+                                       1. Quiz me on everything
+                                       2. Choose a specific flashcard
+                                       """);
+                    int quizMode = scanner.nextInt();
+                    scanner.nextLine();
                     
+                    switch (quizMode) {
+                        case 1 -> {
+                            for (int i = 0; i < cards.size(); i++) {
+                                System.out.println("-> " + cards.get(i).getQuestion() + "?");
+                                String tempAnswer = scanner.nextLine();
+                                
+                                if (tempAnswer.equalsIgnoreCase(cards.get(i).getAnswer())) {
+                                    System.out.println("""
+                                                       CORRECTTT!!
+                                                       
+                                                       ____________________________________________
+                                                       """);
+                                }
+                                else {
+                                    System.out.println("Beeeeep, wrong answer :( ");
+                                }
+                            }
+                        }
+                    }
                 }
             }
              System.out.println("""
-                               What would you like to do now?
+                               \nWhat would you like to do now?
                                1. Add a Flashcard 
                                2. View Flashcards
                                3. Quiz Mode!
